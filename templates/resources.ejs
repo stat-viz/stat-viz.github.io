@@ -1,38 +1,30 @@
 ```{=html}
-<ul class="resourcelist list">
+<table class="resourcelist list">
+<tr><th>Link</th><th>Author</th><th>Description</th><th>Rating</th></tr>
 <% for (const item of items) { %>
-  <li <%= metadataAttrs(item) %>>
-    <div>
-      <% if (item.image) { %>
-      <img src="<%- item.image %>">
-      <% } else { %>
-      <img src="../../images/logo.png">
-      <% } %>
-      
-      <!--
-      <ul class="quarto-categories">
-      <% for (const category of item.categories) { %>
-        <li><a href="/external.html#category=<%= category %>"><%= category %></a></li>
-      <% } %>
-      </ul>
-      -->
-    </div>
+  <tr class="resourceinfo" <%= metadataAttrs(item) %>>
+    <td><a href="<%= item.path %>"><%= item.title %></a></td>
     
+    <td><%= item.author %></td>
     
-    <div class="resourceinfo">
-      <h3><a href="<%= item.path %>"><%= item.title %></a></h3>
-      
-      <div class="rating-widget" resource-id="<%= item.path %>">
-        <span class="star" data-value="1">&#9733;</span>
-        <span class="star" data-value="2">&#9733;</span>
-        <span class="star" data-value="3">&#9733;</span>
-        <span class="star" data-value="4">&#9733;</span>
-        <span class="star" data-value="5">&#9733;</span>
-      </div>
-      
-      <p class="description"><%= item.description %></p>
-    </div>
-  </li>
+    <!--
+    <td>
+    <% if (item.image) { %>
+    <img src="<%- item.image %>">
+    <% } %>
+    </td>
+    -->
+    
+    <td><%= item.description %></td>
+    
+    <td><div class="rating-widget" resource-id="<%= item.path %>">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+    </div></td>
+  </tr>
 <% } %>
-</ul>
+</table>
 ```

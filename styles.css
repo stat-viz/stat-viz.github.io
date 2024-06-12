@@ -1,17 +1,7 @@
-/*-- scss:defaults --*/
-$link-color: #9522c9;
-
-/*-- scss:rules --*/
 .navbar-logo {
   max-height: 50px;
 }
 
-:root {
-  --theme: #9522c9;
-  --background: #222222;
-  --highlight: #DDDDDD;
-  --textontheme: #FFFFFF;
-}
 
 .dropdown-item:hover {
   background-color: var(--theme);
@@ -28,9 +18,22 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: var(--theme);
 }
 
-
+.resourcelist {
+  list-style-type: none;
+}
 .resourceinfo img {
-  max-height: 200px;
+  float: right;
+  width: 200px;
+}
+
+.star {
+  font-size: 1.5em;
+  color: grey;
+  cursor: pointer;
+}
+
+.star:hover, .star.hovered {
+  color: yellow;
 }
 
 

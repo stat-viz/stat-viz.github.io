@@ -2,30 +2,30 @@
 title: External Resources
 listing:
   template: templates/resources.ejs
-  contents: external
-  # contents: 
-  #   - title: "R Psychologist"
-  #     author: "Kristoffer Magnusson"
-  #     image: /images/rpsychologist.png
-  #     categories: [collection]
-  #     path: https://rpsychologist.com/viz
-  #     description: Visualisations of statistical concepts
-  #   - title: "Plot Demo"
-  #     author: "Lisa DeBruine"
-  #     image: /images/plotdemo.png
-  #     categories: [plot]
-  #     path: https://rstudio-connect.psy.gla.ac.uk/plotdemo/
-  #     description: Visualise simulated data from a 2x2 factorial design with 6 different plots
-  #   - title: "Simulate Distributions"
-  #     author: "Lisa DeBruine"
-  #     categories: [distribution, normal, poisson, uniform, binomial, simulate]
-  #     path: https://rstudio-connect.psy.gla.ac.uk/simulate/
-  #     description: Simulate data from different distributions
-  #   - title: "Visualise Power"
-  #     author: "Daniël Lakens"
-  #     categories: [power, effect size, p-value]
-  #     path: https://shiny.ieis.tue.nl/d_p_power/
-  #     description: Distribution of Cohen's d, p-values, and power curves for an independent two-tailed t-test
+  #contents: external
+  contents:
+    - title: "R Psychologist"
+      author: "Kristoffer Magnusson"
+      image: /images/rpsychologist.png
+      categories: [collection]
+      path: https://rpsychologist.com/viz
+      description: Visualisations of statistical concepts
+    - title: "Plot Demo"
+      author: "Lisa DeBruine"
+      image: /images/plotdemo.png
+      categories: [plot]
+      path: https://rstudio-connect.psy.gla.ac.uk/plotdemo/
+      description: Visualise simulated data from a 2x2 factorial design with 6 different plots
+    - title: "Simulate Distributions"
+      author: "Lisa DeBruine"
+      categories: [distribution, normal, poisson, uniform, binomial, simulate]
+      path: https://rstudio-connect.psy.gla.ac.uk/simulate/
+      description: Simulate data from different distributions
+    - title: "Visualise Power"
+      author: "Daniël Lakens"
+      categories: [power, effect size, p-value]
+      path: https://shiny.ieis.tue.nl/d_p_power/
+      description: Distribution of Cohen's d, p-values, and power curves for an independent two-tailed t-test
   sort: ""
   image-placeholder: "images/logo.png"
   type: default # default table grid custom

@@ -24,4 +24,5 @@ format:
   html:
     theme: 
       light: [flatly, light.scss]
-      dark: [darkly, styles.scss]
+      dark: [darkly, dark.scss]
+    css: styles.css
