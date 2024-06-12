@@ -1,0 +1,91 @@
+---
+order: 0001
+title: "R Psychologist"
+author: "Kristoffer Magnusson"
+image: /images/rpsychologist.png
+categories:
+  - statistics
+  - visualisation
+url: https://rpsychologist.com/viz
+---
+
+Visualsations of statistical concepts by Kristoffer Magnusson, a clinical psychologist.
+
+Do you like this?
+
+```{=html}
+     <style>
+
+         .rating-widget {
+        display: flex;
+        direction: ltr; /* Ensure direction is left-to-right */
+        font-size: 2rem;
+    }
+
+    .star {
+        cursor: pointer;
+        color: lightgray;
+    }
+
+    .star:hover,
+    .star.hovered,
+    .star.selected {
+        color: gold;
+    }
+    </style>
+
+--> to listing template
+--> needs ID (resource-ID)
+--> item.path
+       <div class="rating-widget">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+    </div>
+    <div class="thank-you-message" style="display: none;">Thank you for your rating!</div>
+
+--> Highlighting logic based on ID
+--> calls a function 
+  <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stars = document.querySelectorAll('.star');
+            const sessionId = 'sess-' + new Date().getTime() + '-' + Math.random().toString(36).substr(2, 9);
+
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    stars.forEach(s => s.classList.remove('selected'));
+                    star.classList.add('selected');
+                    const rating = star.getAttribute('data-value');
+                    const url = `https://docs.google.com/forms/d/e/1FAIpQLSchWJHruyi44gqJckXDeOziDRZEj72CJrL3tYl-2MK2U76qBw/formResponse?usp=pp_url&entry.1707279919=test&entry.2124815537=${rating}&entry.227915864=${sessionId}&submit=Submit`;
+                    console.log(`Submitting rating: ${url}`);
+                    
+                    fetch(url, {mode: 'no-cors'})
+                        .then(function(response) {
+                            console.log('Request was sent successfully.');
+                                                        ratingWidget.style.display = 'none';
+                            thankYouMessage.style.display = 'block';
+                        }).catch(function(error) {  
+                            console.log('Request failed', error);  
+                        });
+                });
+
+                star.addEventListener('mouseover', () => {
+                    stars.forEach(s => s.classList.remove('hovered'));
+                    star.classList.add('hovered');
+                    let prevStar = star.previousElementSibling;
+                    while (prevStar) {
+                        prevStar.classList.add('hovered');
+                        prevStar = prevStar.previousElementSibling;
+                    }
+                });
+
+                star.addEventListener('mouseout', () => {
+                    stars.forEach(s => s.classList.remove('hovered'));
+                });
+            });
+        });
+    </script>
+
+```
