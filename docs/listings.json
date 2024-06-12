@@ -1,8 +1,14 @@
 [
   {
-    "listing": "/resource.html",
+    "listing": "/internal.html",
     "items": [
-      "/resource/rpsychologist.html"
+      "/internal/demo.html"
+    ]
+  },
+  {
+    "listing": "/external.html",
+    "items": [
+      "/external/rpsychologist.html"
     ]
   }
 ]

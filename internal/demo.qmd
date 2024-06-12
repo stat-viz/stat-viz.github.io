@@ -1,0 +1,12 @@
+---
+order: 0001
+title: "Simulate Distributions"
+author: "Lisa DeBruine"
+description: |
+  Simulate data from different distributions with different parameters
+categories:
+  - demo
+---
+
+<iframe height="600" width="100%" frameborder="no" src="https://rstudio-connect.psy.gla.ac.uk/simulate/"> </iframe>
+

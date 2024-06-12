@@ -1,7 +1,7 @@
 ---
 title: External Resources
 listing:
-  contents: resource
+  contents: external
   sort: "order"
   image-placeholder: "images/logo.png"
   type: default # default table grid custom

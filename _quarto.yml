@@ -17,7 +17,8 @@ website:
     right:
       - text: Resources
         menu: 
-          - resource.qmd
+          - external.qmd
+          - internal.qmd
 format:
   html:
     theme: 

@@ -1,0 +1,15 @@
+---
+title: Internal Resources
+listing:
+  contents: internal
+  sort: "order"
+  image-placeholder: "images/logo.png"
+  type: default # default table grid custom
+  categories: true
+  sort-ui: false
+  filter-ui: true
+page-layout: full
+title-block-banner: false
+---
+
+Here are some internal resources.
