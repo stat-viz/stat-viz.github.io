@@ -19,6 +19,7 @@ website:
         menu: 
           - external.qmd
           - internal.qmd
+      - about.qmd
 format:
   html:
     theme: 
