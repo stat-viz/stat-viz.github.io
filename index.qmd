@@ -12,9 +12,8 @@
 #   filter-ui: false
 ---
 
-<img src="/images/logo.png" style="float:left; padding: 1em 1em 0 0; width: 7em; min-width: 50px;"/>
 
-This is the project...
+Interactive Resources for All: A Hackathon to Enhance Statistics Literacy by Yu Yang Chou
 
 
 <!--
