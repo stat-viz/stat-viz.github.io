@@ -1,7 +1,9 @@
 [
   {
     "listing": "/external.html",
-    "items": []
+    "items": [
+      "/external/rpsychologist.html"
+    ]
   },
   {
     "listing": "/internal.html",

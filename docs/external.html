@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-language','listing-order','listing-title','listing-author','listing-image','listing-categories','listing-path','listing-description','listing-outputHref','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-categories","listing-description"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-order","listing-title","listing-author","listing-image","listing-categories","listing-path","listing-description","listing-outputHref","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -186,7 +186,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="binomial">binomial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="collection">collection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="distribution">distribution <span class="quarto-category-count">(1)</span></div><div class="category" data-category="effect size">effect size <span class="quarto-category-count">(1)</span></div><div class="category" data-category="normal">normal <span class="quarto-category-count">(1)</span></div><div class="category" data-category="p-value">p-value <span class="quarto-category-count">(1)</span></div><div class="category" data-category="plot">plot <span class="quarto-category-count">(1)</span></div><div class="category" data-category="poisson">poisson <span class="quarto-category-count">(1)</span></div><div class="category" data-category="power">power <span class="quarto-category-count">(1)</span></div><div class="category" data-category="simulate">simulate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="uniform">uniform <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="visualisation">visualisation <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -214,154 +214,49 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
 <div class="listing-actions-group">
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="collection">
-<div class="thumbnail">
-<p><a href="https://rpsychologist.com/viz" class="no-external"></a></p><a href="https://rpsychologist.com/viz" class="no-external">
-<p><img src="./images/rpsychologist.png" class="thumbnail-image"></p>
-</a><p><a href="https://rpsychologist.com/viz" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="https://rpsychologist.com/viz" class="no-external">R Psychologist</a>
-</h3>
-<div class="listing-subtitle">
-<a href="https://rpsychologist.com/viz" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('collection'); return false;">
-collection
-</div>
-</div>
-<div class="listing-description">
-<a href="https://rpsychologist.com/viz" class="no-external">Visualisations of statistical concepts</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="https://rpsychologist.com/viz" class="no-external"></a></p><a href="https://rpsychologist.com/viz" class="no-external">
-<div class="listing-author">
-Kristoffer Magnusson
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="plot">
-<div class="thumbnail">
-<p><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/" class="no-external"></a></p><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/" class="no-external">
-<p><img src="./images/plotdemo.png" class="thumbnail-image"></p>
-</a><p><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/" class="no-external">Plot Demo</a>
-</h3>
-<div class="listing-subtitle">
-<a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('plot'); return false;">
-plot
-</div>
-</div>
-<div class="listing-description">
-<a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/" class="no-external">Visualise simulated data from a 2x2 factorial design with 6 different plots</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/" class="no-external"></a></p><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/" class="no-external">
-<div class="listing-author">
-Lisa DeBruine
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="distribution,normal,poisson,uniform,binomial,simulate">
-<div class="thumbnail">
-<p><a href="https://rstudio-connect.psy.gla.ac.uk/simulate/" class="no-external"></a></p><a href="https://rstudio-connect.psy.gla.ac.uk/simulate/" class="no-external">
-</a><p><a href="https://rstudio-connect.psy.gla.ac.uk/simulate/" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="https://rstudio-connect.psy.gla.ac.uk/simulate/" class="no-external">Simulate Distributions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="https://rstudio-connect.psy.gla.ac.uk/simulate/" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('distribution'); return false;">
-distribution
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('normal'); return false;">
-normal
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('poisson'); return false;">
-poisson
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('uniform'); return false;">
-uniform
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('binomial'); return false;">
-binomial
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('simulate'); return false;">
-simulate
-</div>
-</div>
-<div class="listing-description">
-<a href="https://rstudio-connect.psy.gla.ac.uk/simulate/" class="no-external">Simulate data from different distributions</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="https://rstudio-connect.psy.gla.ac.uk/simulate/" class="no-external"></a></p><a href="https://rstudio-connect.psy.gla.ac.uk/simulate/" class="no-external">
-<div class="listing-author">
-Lisa DeBruine
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="power,effect size,p-value">
-<div class="thumbnail">
-<p><a href="https://shiny.ieis.tue.nl/d_p_power/" class="no-external"></a></p><a href="https://shiny.ieis.tue.nl/d_p_power/" class="no-external">
-</a><p><a href="https://shiny.ieis.tue.nl/d_p_power/" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="https://shiny.ieis.tue.nl/d_p_power/" class="no-external">Visualise Power</a>
-</h3>
-<div class="listing-subtitle">
-<a href="https://shiny.ieis.tue.nl/d_p_power/" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('power'); return false;">
-power
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('effect size'); return false;">
-effect size
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('p-value'); return false;">
-p-value
-</div>
-</div>
-<div class="listing-description">
-<a href="https://shiny.ieis.tue.nl/d_p_power/" class="no-external">Distribution of Cohen’s d, p-values, and power curves for an independent two-tailed t-test</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="https://shiny.ieis.tue.nl/d_p_power/" class="no-external"></a></p><a href="https://shiny.ieis.tue.nl/d_p_power/" class="no-external">
-<div class="listing-author">
-Daniël Lakens
-</div>
-</a>
-</div>
-</div>
-</div>
+<ul class="resourcelist list">
+
+  <li data-index="0" data-categories="statistics,visualisation" data-listing-file-modified-sort="1718180121522" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <div>
+      
+      <img src="./images/rpsychologist.png">
+      
+      
+      <!--
+      <ul class="quarto-categories">
+      
+        <li><a href="/external.html#category=statistics">statistics</a></li>
+      
+        <li><a href="/external.html#category=visualisation">visualisation</a></li>
+      
+      </ul>
+      -->
+    </div>
+    
+    
+    <div class="resourceinfo">
+      <h3 class="anchored"><a href="./external/rpsychologist.html">R Psychologist</a></h3>
+      
+      <div class="rating-widget" resource-id="/external/rpsychologist.qmd">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+      
+      <p class="description">Visualisations of statistical concepts.</p>
+    </div>
+  </li>
+
+</ul>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

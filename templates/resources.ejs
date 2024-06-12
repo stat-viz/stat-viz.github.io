@@ -12,28 +12,25 @@
       <!--
       <ul class="quarto-categories">
       <% for (const category of item.categories) { %>
-        <li><a href="/projects.html#category=<%= category %>"><%= category %></a></li>
+        <li><a href="/external.html#category=<%= category %>"><%= category %></a></li>
       <% } %>
       </ul>
       -->
     </div>
     
-    <% if (item.doi) { %>
-    <div data-badge-popover="left" data-badge-type="donut" data-doi="<%= item.doi %>" data-hide-no-mentions="true" class="altmetric-embed"></div>
-    <% } %>
-  
-    <div class="projinfo">
+    
+    <div class="resourceinfo">
       <h3><a href="<%= item.path %>"><%= item.title %></a></h3>
       
-      <% if (item.links) { %>
-      <ul class="buttonlist">
-        <% Object.keys(item.links).forEach(function (key) { %>
-        <li><a href="<%= item.links[key] %>"><%= key %></a></li>
-        <% }) %>
-      </ul>
-      <% } %>
+      <div class="rating-widget" resource-id="<%= item.path %>">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
       
-      <p class="abstract"><%= item.abstract %></p>
+      <p class="description"><%= item.description %></p>
     </div>
   </li>
 <% } %>
