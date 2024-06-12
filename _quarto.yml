@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+  
+execute: 
+  freeze: auto
+
+website:
+  title: "Statistical Visualisations"
+  site-url: https://stat-viz.github.io
+  repo-url: https://github.com/stat-viz/stat-viz.github.io
+  image: images/logo.png
+  favicon: images/favicon.ico
+  navbar:
+    logo: /images/logo.png
+    logo-alt: ""
+    right:
+      - text: Resources
+        menu: 
+          - resource.qmd
+format:
+  html:
+    theme: 
+      light: [flatly, light.scss]
+      dark: [darkly, styles.scss]

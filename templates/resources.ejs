@@ -1,0 +1,41 @@
+```{=html}
+<ul class="resourcelist list">
+<% for (const item of items) { %>
+  <li <%= metadataAttrs(item) %>>
+    <div>
+      <% if (item.image) { %>
+      <img src="<%- item.image %>">
+      <% } else { %>
+      <img src="../../images/logo.png">
+      <% } %>
+      
+      <!--
+      <ul class="quarto-categories">
+      <% for (const category of item.categories) { %>
+        <li><a href="/projects.html#category=<%= category %>"><%= category %></a></li>
+      <% } %>
+      </ul>
+      -->
+    </div>
+    
+    <% if (item.doi) { %>
+    <div data-badge-popover="left" data-badge-type="donut" data-doi="<%= item.doi %>" data-hide-no-mentions="true" class="altmetric-embed"></div>
+    <% } %>
+  
+    <div class="projinfo">
+      <h3><a href="<%= item.path %>"><%= item.title %></a></h3>
+      
+      <% if (item.links) { %>
+      <ul class="buttonlist">
+        <% Object.keys(item.links).forEach(function (key) { %>
+        <li><a href="<%= item.links[key] %>"><%= key %></a></li>
+        <% }) %>
+      </ul>
+      <% } %>
+      
+      <p class="abstract"><%= item.abstract %></p>
+    </div>
+  </li>
+<% } %>
+</ul>
+```

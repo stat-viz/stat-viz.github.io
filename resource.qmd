@@ -1,0 +1,15 @@
+---
+title: External Resources
+listing:
+  contents: resource
+  sort: "order"
+  image-placeholder: "images/logo.png"
+  type: default # default table grid custom
+  categories: true
+  sort-ui: false
+  filter-ui: true
+page-layout: full
+title-block-banner: false
+---
+
+Here are some external resources.

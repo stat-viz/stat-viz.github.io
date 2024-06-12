@@ -1,0 +1,34 @@
+/*-- scss:defaults --*/
+$link-color: #9522c9;
+
+/*-- scss:rules --*/
+.navbar-logo {
+  max-height: 50px;
+}
+
+:root {
+  --theme: #9522c9;
+  --background: #DDDDDD;
+  --highlight: #9522c9;
+}
+
+.dropdown-item:hover {
+  background-color: var(--theme);
+}
+
+.nav-footer, nav.navbar, nav .navbar-container  {
+  background-color: #999999;
+  color: var(--theme);
+  background-image: none;
+}
+
+.navbar-title,
+.navbar-dark .navbar-nav .nav-link,
+.nav-item .nav-link {
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+  color: var(--theme);
+}

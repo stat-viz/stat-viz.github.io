@@ -1,1 +1,2 @@
-# stat-viz.github.io
+# Statistical Visualisations
+

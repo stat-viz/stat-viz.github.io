@@ -1,0 +1,12 @@
+---
+order: 0001
+title: "R Psychologist"
+author: "Kristoffer Magnusson"
+image: /images/rpsychologist.png
+categories:
+  - statistics
+  - visualisation
+url: https://rpsychologist.com/viz
+---
+
+Visualsations of statistical concepts by Kristoffer Magnusson, a clinical psychologist.

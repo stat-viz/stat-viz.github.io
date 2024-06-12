@@ -1,0 +1,27 @@
+---
+# listing:
+#   id: news-listing
+#   contents: news
+#   date-format: iso
+#   sort: "date desc"
+#   type: default
+#   max-items: 3
+#   image-placeholder: "images/logo.png"
+#   categories: false
+#   sort-ui: false
+#   filter-ui: false
+---
+
+<img src="/images/logo.png" style="float:left; padding: 1em 1em 0 0; width: 7em; min-width: 50px;"/>
+
+This is the project...
+
+
+<!--
+### Recent News
+
+::: {#news-listing}
+:::
+
+[Older news...](news.html)
+-->
