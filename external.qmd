@@ -26,8 +26,8 @@ listing:
       description: Distribution of Cohen's d, p-values, and power curves for an independent two-tailed t-test
   sort: ""
   image-placeholder: "images/logo.png"
-  type: table # default table grid custom
-  fields: [image, title, author, description, categories]
+  type: default # default table grid custom
+  #fields: [title, author, description, categories]
   categories: true
   sort-ui: false
   filter-ui: true
