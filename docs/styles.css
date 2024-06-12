@@ -32,7 +32,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   cursor: pointer;
 }
 
-.star:hover, .star.hovered {
+.star:hover, 
+.star:has(+ .star:hover),
+.star:has(+ .star + .star:hover),
+.star:has(+ .star + .star + .star:hover),
+.star:has(+ .star + .star + .star + .star:hover),
+.star.hovered {
   color: yellow;
 }
 

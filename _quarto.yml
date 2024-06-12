@@ -13,7 +13,7 @@ website:
   favicon: images/favicon.ico
   navbar:
     logo: /images/logo.png
-    logo-alt: ""
+    logo-alt: "Purple hexagon with stat viz"
     right:
       - text: Resources
         menu: 
