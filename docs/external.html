@@ -131,7 +131,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="includes/styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -210,7 +210,7 @@ window.Quarto = {
 </header>
 
 
-<p>Here are some external resources.</p>
+<p>Here are some external resources. The star ratings do not currently work, but are in development.</p>
 
 
 
@@ -241,7 +241,8 @@ window.Quarto = {
 <td><a href="https://rpsychologist.com/viz">R Psychologist</a></td>
 <td>Kristoffer Magnusson</td>
 <td>Visualisations of statistical concepts</td>
-<td><div class="rating-widget" data-resource-id="https://rpsychologist.com/viz">
+<td><span class="star-rating" data-id="https://rpsychologist.com/viz"><span> </span></span>
+<div class="rating-widget" data-id="https://rpsychologist.com/viz">
 <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
 </div></td>
 </tr>
@@ -249,7 +250,8 @@ window.Quarto = {
 <td><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">Plot Demo</a></td>
 <td>Lisa DeBruine</td>
 <td>Visualise simulated data from a 2x2 factorial design with 6 different plots</td>
-<td><div class="rating-widget" data-resource-id="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">
+<td><span class="star-rating" data-id="https://rstudio-connect.psy.gla.ac.uk/plotdemo/"><span> </span></span>
+<div class="rating-widget" data-id="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">
 <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
 </div></td>
 </tr>
@@ -257,7 +259,8 @@ window.Quarto = {
 <td><a href="https://rstudio-connect.psy.gla.ac.uk/simulate/">Simulate Distributions</a></td>
 <td>Lisa DeBruine</td>
 <td>Simulate data from different distributions</td>
-<td><div class="rating-widget" data-resource-id="https://rstudio-connect.psy.gla.ac.uk/simulate/">
+<td><span class="star-rating" data-id="https://rstudio-connect.psy.gla.ac.uk/simulate/"><span> </span></span>
+<div class="rating-widget" data-id="https://rstudio-connect.psy.gla.ac.uk/simulate/">
 <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
 </div></td>
 </tr>
@@ -265,7 +268,8 @@ window.Quarto = {
 <td><a href="https://shiny.ieis.tue.nl/d_p_power/">Visualise Power</a></td>
 <td>Daniël Lakens</td>
 <td>Distribution of Cohen's d, p-values, and power curves for an independent two-tailed t-test</td>
-<td><div class="rating-widget" data-resource-id="https://shiny.ieis.tue.nl/d_p_power/">
+<td><span class="star-rating" data-id="https://shiny.ieis.tue.nl/d_p_power/"><span> </span></span>
+<div class="rating-widget" data-id="https://shiny.ieis.tue.nl/d_p_power/">
 <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
 </div></td>
 </tr>
@@ -276,6 +280,51 @@ window.Quarto = {
 No matching items
 </div>
 </div></main> <!-- /main -->
+<script>
+
+var sessionID = (Math.random() + 1).toString(36);
+console.log("sessionID: " + sessionID);
+
+var dataURL =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vROebIG122A68wIC0kyMzhH7GNP3ye6Xhyl0CyV-7q8-N_B7hUMgkaADGjJy2Y3LD-lqXNJS0FVk8lm/pub?gid=2089079954&single=true&output=csv"
+
+document.querySelectorAll('.star-rating').forEach(function(star) {
+  var resourceID = star.getAttribute('data-id');
+  // get rating from google sheet
+  
+  star.innerHTML = "0.0";
+});
+
+document.querySelectorAll('.star').forEach(function(star) {
+  star.addEventListener('click', function() {
+    var widget = this.parentElement;
+    
+    // return if already set
+    if (widget.classList.contains('star-set')) return null;
+    
+    var resourceID = widget.getAttribute('data-id');
+    var value = this.getAttribute('data-value');
+    var url = "https://docs.google.com/forms/d/e/1FAIpQLSff8ZWiZDSgojHxcFeb_L-TbO5klCxAyIBZkgcEzq8tAfTODw/formResponse?usp=pp_url" +
+    "&entry.496682832=" + resourceID +
+    "&entry.1274867230=" + sessionID + 
+    "&entry.1648203726=" + value +
+    "&submit=Submit";
+    
+    //console.log(url);
+    
+    fetch(url, {mode: "no-cors"})
+      .then(function(response) {
+        console.log("success")
+        widget.classList.add('star-set');
+        widget.classList.add('star-set-' + value);
+      })
+      .catch(function(error) {
+        console.log("error: " + error )
+      });
+
+  });
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
