@@ -13,14 +13,16 @@ website:
   favicon: images/favicon.ico
   navbar:
     logo: /images/logo.png
-    logo-alt: ""
+    logo-alt: "Purple hexagon with stat viz"
     right:
       - text: Resources
         menu: 
           - external.qmd
           - internal.qmd
+      - about.qmd
 format:
   html:
     theme: 
       light: [flatly, light.scss]
-      dark: [darkly, styles.scss]
+      dark: [darkly, dark.scss]
+    css: styles.css

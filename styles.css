@@ -1,0 +1,47 @@
+.navbar-logo {
+  max-height: 50px;
+}
+
+
+.dropdown-item:hover {
+  background-color: var(--theme);
+}
+
+.nav-footer, nav.navbar, nav .navbar-container {
+  background-image: none;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: var(--theme);
+}
+
+.resourcelist {
+  list-style-type: none;
+}
+.resourceinfo img {
+  float: right;
+  width: 200px;
+}
+
+.star {
+  font-size: 1.5em;
+  color: grey;
+  cursor: pointer;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #555555;
+}
+
+.star:hover, 
+.star:has(+ .star:hover),
+.star:has(+ .star + .star:hover),
+.star:has(+ .star + .star + .star:hover),
+.star:has(+ .star + .star + .star + .star:hover),
+.star.hovered {
+  color: yellow;
+  -webkit-text-stroke-color: orange;
+}
+
+

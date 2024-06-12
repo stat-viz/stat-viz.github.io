@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stat-viz.github.io/external/rpsychologist.html</loc>
-    <lastmod>2024-06-12T07:27:22.075Z</lastmod>
+    <lastmod>2024-06-12T08:15:21.522Z</lastmod>
   </url>
   <url>
-    <loc>https://stat-viz.github.io/internal/demo.html</loc>
-    <lastmod>2024-06-12T07:53:49.236Z</lastmod>
+    <loc>https://stat-viz.github.io/index.html</loc>
+    <lastmod>2024-06-12T08:06:54.412Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stat-viz.github.io/external.html</loc>
+    <lastmod>2024-06-12T10:03:56.232Z</lastmod>
   </url>
   <url>
     <loc>https://stat-viz.github.io/internal.html</loc>
     <lastmod>2024-06-12T07:46:29.496Z</lastmod>
   </url>
   <url>
-    <loc>https://stat-viz.github.io/external.html</loc>
-    <lastmod>2024-06-12T07:46:35.029Z</lastmod>
+    <loc>https://stat-viz.github.io/internal/demo.html</loc>
+    <lastmod>2024-06-12T08:26:53.539Z</lastmod>
   </url>
   <url>
-    <loc>https://stat-viz.github.io/index.html</loc>
-    <lastmod>2024-06-12T07:48:13.999Z</lastmod>
+    <loc>https://stat-viz.github.io/about.html</loc>
+    <lastmod>2024-06-12T08:06:29.865Z</lastmod>
   </url>
 </urlset>

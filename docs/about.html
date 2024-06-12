@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Visualisations - External Resources</title>
+<title>Statistical Visualisations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,70 +69,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-categories","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -170,7 +110,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -182,100 +122,34 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="binomial">binomial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="collection">collection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="distribution">distribution <span class="quarto-category-count">(1)</span></div><div class="category" data-category="effect size">effect size <span class="quarto-category-count">(1)</span></div><div class="category" data-category="normal">normal <span class="quarto-category-count">(1)</span></div><div class="category" data-category="p-value">p-value <span class="quarto-category-count">(1)</span></div><div class="category" data-category="plot">plot <span class="quarto-category-count">(1)</span></div><div class="category" data-category="poisson">poisson <span class="quarto-category-count">(1)</span></div><div class="category" data-category="power">power <span class="quarto-category-count">(1)</span></div><div class="category" data-category="simulate">simulate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="uniform">uniform <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">External Resources</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Here are some external resources.</p>
+<main class="content" id="quarto-document-content">
 
 
 
 
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div>
-<table class="resourcelist list table" data-quarto-postprocess="true">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Link</td>
-<td data-quarto-table-cell-role="th">Author</td>
-<td data-quarto-table-cell-role="th">Description</td>
-<td data-quarto-table-cell-role="th">Rating</td>
-</tr>
-<tr class="even resourceinfo" data-index="0" data-categories="collection">
-<td><a href="https://rpsychologist.com/viz">R Psychologist</a></td>
-<td>Kristoffer Magnusson</td>
-<td>Visualisations of statistical concepts</td>
-<td><div class="rating-widget" data-resource-id="https://rpsychologist.com/viz">
-<span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
-</div></td>
-</tr>
-<tr class="odd resourceinfo" data-index="1" data-categories="plot">
-<td><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">Plot Demo</a></td>
-<td>Lisa DeBruine</td>
-<td>Visualise simulated data from a 2x2 factorial design with 6 different plots</td>
-<td><div class="rating-widget" data-resource-id="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">
-<span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
-</div></td>
-</tr>
-<tr class="even resourceinfo" data-index="2" data-categories="distribution,normal,poisson,uniform,binomial,simulate">
-<td><a href="https://rstudio-connect.psy.gla.ac.uk/simulate/">Simulate Distributions</a></td>
-<td>Lisa DeBruine</td>
-<td>Simulate data from different distributions</td>
-<td><div class="rating-widget" data-resource-id="https://rstudio-connect.psy.gla.ac.uk/simulate/">
-<span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
-</div></td>
-</tr>
-<tr class="odd resourceinfo" data-index="3" data-categories="power,effect size,p-value">
-<td><a href="https://shiny.ieis.tue.nl/d_p_power/">Visualise Power</a></td>
-<td>Daniël Lakens</td>
-<td>Distribution of Cohen's d, p-values, and power curves for an independent two-tailed t-test</td>
-<td><div class="rating-widget" data-resource-id="https://shiny.ieis.tue.nl/d_p_power/">
-<span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
-</div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<section id="about" class="level1">
+<h1>About</h1>
+<p>This website was created during the following SIPS2024 Hackathon:</p>
+<p>Interactive Resources for All: A Hackathon to Enhance Statistics Literacy by Yu Yang Chou</p>
+<p>Understanding statistics is essential to researchers at all levels to interpret and apply findings, but also for the general population to critically evaluate information. While learning statistics can be challenging for those new to it, it has been shown that such experience can be improved through animation interactivity at least for basic concepts (Wang et al., 2011) and Bayesian reasoning (Mosca et al., 2021). However, creating such interactive resources is time-consuming and requires specific skill sets. Therefore, this hackathon aims to: collate interactive resources to help beginners to understand statistics (e.g., https://rpsychologist.com/; Magnusson, 2024); start creating an open-source textbook (e.g., a bookdown) to make these resources more accessible to instructors. To achieve these two aims, we will organize the hackathon in two parts: first, we will collaboratively decide what to include, and second, we will discuss the output format that will benefit students the most, and start creating this output.</p>
+<!--
+### Recent News
+
+::: {#news-listing}
+:::
+
+[Older news...](news.html)
+-->
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

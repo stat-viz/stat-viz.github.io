@@ -1,30 +1,30 @@
 [
   {
-    "objectID": "external/rpsychologist.html",
-    "href": "external/rpsychologist.html",
-    "title": "R Psychologist",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistical Visualisations",
     "section": "",
-    "text": "Visualsations of statistical concepts by Kristoffer Magnusson, a clinical psychologist."
-  },
-  {
-    "objectID": "internal.html",
-    "href": "internal.html",
-    "title": "Internal Resources",
-    "section": "",
-    "text": "Here are some internal resources.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSimulate Distributions\n\n\n\n\n\n\ndemo\n\n\n\nSimulate data from different distributions with different parameters \n\n\n\n\n\nLisa DeBruine\n\n\n\n\n\n\nNo matching items"
+    "text": "Understanding statistics is essential to researchers at all levels to interpret and apply findings, but also for the general population to critically evaluate information. While learning statistics can be challenging for those new to it, it has been shown that such experience can be improved through animation interactivity at least for basic concepts (Wang et al., 2011) and Bayesian reasoning (Mosca et al., 2021)."
   },
   {
     "objectID": "external.html",
     "href": "external.html",
     "title": "External Resources",
     "section": "",
-    "text": "Here are some external resources.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nR Psychologist\n\n\n\n\n\n\nstatistics\n\n\nvisualisation\n\n\n\n\n\n\n\n\n\nKristoffer Magnusson\n\n\n\n\n\n\nNo matching items"
+    "text": "Here are some external resources.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\nLink\nAuthor\nDescription\nRating\n\n\nR Psychologist\nKristoffer Magnusson\nVisualisations of statistical concepts\n\n★ ★ ★ ★ ★\n\n\n\nPlot Demo\nLisa DeBruine\nVisualise simulated data from a 2x2 factorial design with 6 different plots\n\n★ ★ ★ ★ ★\n\n\n\nSimulate Distributions\nLisa DeBruine\nSimulate data from different distributions\n\n★ ★ ★ ★ ★\n\n\n\nVisualise Power\nDaniël Lakens\nDistribution of Cohen's d, p-values, and power curves for an independent two-tailed t-test\n\n★ ★ ★ ★ ★\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistical Visualisations",
+    "objectID": "internal.html",
+    "href": "internal.html",
+    "title": "Internal Resources",
     "section": "",
-    "text": "This is a demo website created during the following SIPS2024 Hackathon:\nInteractive Resources for All: A Hackathon to Enhance Statistics Literacy by Yu Yang Chou\nUnderstanding statistics is essential to researchers at all levels to interpret and apply findings, but also for the general population to critically evaluate information. While learning statistics can be challenging for those new to it, it has been shown that such experience can be improved through animation interactivity at least for basic concepts (Wang et al., 2011) and Bayesian reasoning (Mosca et al., 2021). However, creating such interactive resources is time-consuming and requires specific skill sets. Therefore, this hackathon aims to: collate interactive resources to help beginners to understand statistics (e.g., https://rpsychologist.com/; Magnusson, 2024); start creating an open-source textbook (e.g., a bookdown) to make these resources more accessible to instructors. To achieve these two aims, we will organize the hackathon in two parts: first, we will collaboratively decide what to include, and second, we will discuss the output format that will benefit students the most, and start creating this output."
+    "text": "Here are some internal resources.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSimulate Distributions\n\n\n\n\n\n\ndistributions\n\n\nnormal\n\n\nbinomial\n\n\nuniform\n\n\npoisson\n\n\nsimulate\n\n\n\nSimulate data from different distributions with different parameters \n\n\n\n\n\nLisa DeBruine\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About\nThis website was created during the following SIPS2024 Hackathon:\nInteractive Resources for All: A Hackathon to Enhance Statistics Literacy by Yu Yang Chou\nUnderstanding statistics is essential to researchers at all levels to interpret and apply findings, but also for the general population to critically evaluate information. While learning statistics can be challenging for those new to it, it has been shown that such experience can be improved through animation interactivity at least for basic concepts (Wang et al., 2011) and Bayesian reasoning (Mosca et al., 2021). However, creating such interactive resources is time-consuming and requires specific skill sets. Therefore, this hackathon aims to: collate interactive resources to help beginners to understand statistics (e.g., https://rpsychologist.com/; Magnusson, 2024); start creating an open-source textbook (e.g., a bookdown) to make these resources more accessible to instructors. To achieve these two aims, we will organize the hackathon in two parts: first, we will collaboratively decide what to include, and second, we will discuss the output format that will benefit students the most, and start creating this output."
   }
 ]

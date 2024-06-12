@@ -5,8 +5,16 @@ author: "Lisa DeBruine"
 description: |
   Simulate data from different distributions with different parameters
 categories:
-  - demo
+  - distributions
+  - normal
+  - binomial
+  - uniform
+  - poisson
+  - simulate
 ---
+<!--
+demo for embedding a shiny app
+-->
 
 <iframe height="600" width="100%" frameborder="no" src="https://rstudio-connect.psy.gla.ac.uk/simulate/"> </iframe>
 

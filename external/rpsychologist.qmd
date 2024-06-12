@@ -6,7 +6,8 @@ image: /images/rpsychologist.png
 categories:
   - statistics
   - visualisation
-url: https://rpsychologist.com/viz
+path: https://rpsychologist.com/viz
+description: Visualisations of statistical concepts.
 ---
 
-Visualsations of statistical concepts by Kristoffer Magnusson, a clinical psychologist.
+

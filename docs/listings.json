@@ -1,14 +1,12 @@
 [
   {
+    "listing": "/external.html",
+    "items": []
+  },
+  {
     "listing": "/internal.html",
     "items": [
       "/internal/demo.html"
-    ]
-  },
-  {
-    "listing": "/external.html",
-    "items": [
-      "/external/rpsychologist.html"
     ]
   }
 ]
