@@ -35,6 +35,8 @@ listing:
   filter-ui: true
 page-layout: full
 title-block-banner: false
+include-in-header:
+  text: <script type="text/javascript" src="include/scripts.js"></script>
 ---
 
 Here are some external resources. Note that the ratings do not update instantly, but your input will be included after some minutes.
