@@ -37,4 +37,4 @@ page-layout: full
 title-block-banner: false
 ---
 
-Here are some external resources. The star ratings do not currently work, but are in development.
+Here are some external resources. Note that the ratings do not update instantly, but your input will be included after some minutes.

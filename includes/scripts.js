@@ -3,14 +3,37 @@
 var sessionID = (Math.random() + 1).toString(36);
 console.log("sessionID: " + sessionID);
 
-var dataURL =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vROebIG122A68wIC0kyMzhH7GNP3ye6Xhyl0CyV-7q8-N_B7hUMgkaADGjJy2Y3LD-lqXNJS0FVk8lm/pub?gid=2089079954&single=true&output=csv"
+var dataURL =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vROebIG122A68wIC0kyMzhH7GNP3ye6Xhyl0CyV-7q8-N_B7hUMgkaADGjJy2Y3LD-lqXNJS0FVk8lm/pub?gid=2089079954&single=true&output=csv";
 
-document.querySelectorAll('.star-rating').forEach(function(star) {
-  var resourceID = star.getAttribute('data-id');
-  // get rating from google sheet
-  
-  star.innerHTML = "0.0";
-});
+fetch(dataURL, { mode: 'no-cors' })
+  .then(response => response.text())
+  .then(csvText => {
+    // Parse CSV text to array of objects
+    const rows = csvText.split('\n').map(row => row.split(','));
+    const headers = rows.shift().map(header => header.trim());
+    const data = rows.map(row => {
+      let obj = {};
+      row.forEach((val, idx) => {
+        obj[headers[idx]] = val.trim().replace(/[\r\n]+/g, ''); // Remove any extra characters
+      });
+      return obj;
+    });
+
+    document.querySelectorAll('.star-rating').forEach(function(star) {
+      var resourceID = star.getAttribute('data-id');
+      var entry = data.find(row => row['Resource'] === resourceID);
+
+      if (entry) {
+        console.log('Matching Entry for resourceID', resourceID, ':', entry); // Debugging log to check matching entry
+        var rating = parseFloat(entry['Rating']).toFixed(1);
+        var count = entry['Count'];
+        star.innerHTML = `${rating} (${count})`;
+      } else {
+        star.innerHTML = "0.0 (0)";
+      }
+    });
+  })
+  .catch(error => console.error('Error fetching the CSV data:', error));
 
 document.querySelectorAll('.star').forEach(function(star) {
   star.addEventListener('click', function() {

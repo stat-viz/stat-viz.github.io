@@ -1,6 +1,6 @@
 ```{=html}
 <table class="resourcelist list">
-<tr><th>Link</th><th>Author</th><th>Description</th><th>Rating</th></tr>
+<tr><th>Link</th><th>Author</th><th>Description</th><th>Rating</th><th>Rate this</th></tr>
 <% for (const item of items) { %>
   <tr class="resourceinfo" <%= metadataAttrs(item) %>>
     <td><a href="<%= item.path %>"><%= item.title %></a></td>
@@ -19,6 +19,7 @@
     
     <td>
       <span class="star-rating" data-id="<%= item.path %>"><span>
+    </td> <td>
       <div class="rating-widget" 
              data-id="<%= item.path %>">
       <span class="star" data-value="1">&#9733;</span>
