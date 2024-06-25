@@ -210,7 +210,7 @@ window.Quarto = {
 </header>
 
 
-<p>Here are some external resources. The star ratings do not currently work, but are in development.</p>
+<p>Here are some external resources. Note that the ratings do not update instantly, but your input will be included after some minutes.</p>
 
 
 
@@ -225,10 +225,11 @@ window.Quarto = {
 <div>
 <table class="resourcelist list table" data-quarto-postprocess="true">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -236,13 +237,15 @@ window.Quarto = {
 <td data-quarto-table-cell-role="th">Author</td>
 <td data-quarto-table-cell-role="th">Description</td>
 <td data-quarto-table-cell-role="th">Rating</td>
+<td data-quarto-table-cell-role="th">Rate this</td>
 </tr>
 <tr class="even resourceinfo" data-index="0" data-categories="collection">
 <td><a href="https://rpsychologist.com/viz">R Psychologist</a></td>
 <td>Kristoffer Magnusson</td>
 <td>Visualisations of statistical concepts</td>
-<td><span class="star-rating" data-id="https://rpsychologist.com/viz"><span> </span></span>
-<div class="rating-widget" data-id="https://rpsychologist.com/viz">
+<td><span class="star-rating" data-id="https://rpsychologist.com/viz">
+<span></span></span></td>
+<td><div class="rating-widget" data-id="https://rpsychologist.com/viz">
 <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
 </div></td>
 </tr>
@@ -250,8 +253,9 @@ window.Quarto = {
 <td><a href="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">Plot Demo</a></td>
 <td>Lisa DeBruine</td>
 <td>Visualise simulated data from a 2x2 factorial design with 6 different plots</td>
-<td><span class="star-rating" data-id="https://rstudio-connect.psy.gla.ac.uk/plotdemo/"><span> </span></span>
-<div class="rating-widget" data-id="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">
+<td><span class="star-rating" data-id="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">
+<span></span></span></td>
+<td><div class="rating-widget" data-id="https://rstudio-connect.psy.gla.ac.uk/plotdemo/">
 <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
 </div></td>
 </tr>
@@ -259,8 +263,9 @@ window.Quarto = {
 <td><a href="https://rstudio-connect.psy.gla.ac.uk/simulate/">Simulate Distributions</a></td>
 <td>Lisa DeBruine</td>
 <td>Simulate data from different distributions</td>
-<td><span class="star-rating" data-id="https://rstudio-connect.psy.gla.ac.uk/simulate/"><span> </span></span>
-<div class="rating-widget" data-id="https://rstudio-connect.psy.gla.ac.uk/simulate/">
+<td><span class="star-rating" data-id="https://rstudio-connect.psy.gla.ac.uk/simulate/">
+<span></span></span></td>
+<td><div class="rating-widget" data-id="https://rstudio-connect.psy.gla.ac.uk/simulate/">
 <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
 </div></td>
 </tr>
@@ -268,8 +273,9 @@ window.Quarto = {
 <td><a href="https://shiny.ieis.tue.nl/d_p_power/">Visualise Power</a></td>
 <td>Daniël Lakens</td>
 <td>Distribution of Cohen's d, p-values, and power curves for an independent two-tailed t-test</td>
-<td><span class="star-rating" data-id="https://shiny.ieis.tue.nl/d_p_power/"><span> </span></span>
-<div class="rating-widget" data-id="https://shiny.ieis.tue.nl/d_p_power/">
+<td><span class="star-rating" data-id="https://shiny.ieis.tue.nl/d_p_power/">
+<span></span></span></td>
+<td><div class="rating-widget" data-id="https://shiny.ieis.tue.nl/d_p_power/">
 <span class="star" data-value="1">★</span> <span class="star" data-value="2">★</span> <span class="star" data-value="3">★</span> <span class="star" data-value="4">★</span> <span class="star" data-value="5">★</span>
 </div></td>
 </tr>
@@ -285,14 +291,37 @@ No matching items
 var sessionID = (Math.random() + 1).toString(36);
 console.log("sessionID: " + sessionID);
 
-var dataURL =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vROebIG122A68wIC0kyMzhH7GNP3ye6Xhyl0CyV-7q8-N_B7hUMgkaADGjJy2Y3LD-lqXNJS0FVk8lm/pub?gid=2089079954&single=true&output=csv"
+var dataURL =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vROebIG122A68wIC0kyMzhH7GNP3ye6Xhyl0CyV-7q8-N_B7hUMgkaADGjJy2Y3LD-lqXNJS0FVk8lm/pub?gid=2089079954&single=true&output=csv";
 
-document.querySelectorAll('.star-rating').forEach(function(star) {
-  var resourceID = star.getAttribute('data-id');
-  // get rating from google sheet
-  
-  star.innerHTML = "0.0";
-});
+fetch(dataURL, { mode: 'no-cors' })
+  .then(response => response.text())
+  .then(csvText => {
+    // Parse CSV text to array of objects
+    const rows = csvText.split('\n').map(row => row.split(','));
+    const headers = rows.shift().map(header => header.trim());
+    const data = rows.map(row => {
+      let obj = {};
+      row.forEach((val, idx) => {
+        obj[headers[idx]] = val.trim().replace(/[\r\n]+/g, ''); // Remove any extra characters
+      });
+      return obj;
+    });
+
+    document.querySelectorAll('.star-rating').forEach(function(star) {
+      var resourceID = star.getAttribute('data-id');
+      var entry = data.find(row => row['Resource'] === resourceID);
+
+      if (entry) {
+        console.log('Matching Entry for resourceID', resourceID, ':', entry); // Debugging log to check matching entry
+        var rating = parseFloat(entry['Rating']).toFixed(1);
+        var count = entry['Count'];
+        star.innerHTML = `${rating} (${count})`;
+      } else {
+        star.innerHTML = "0.0 (0)";
+      }
+    });
+  })
+  .catch(error => console.error('Error fetching the CSV data:', error));
 
 document.querySelectorAll('.star').forEach(function(star) {
   star.addEventListener('click', function() {
