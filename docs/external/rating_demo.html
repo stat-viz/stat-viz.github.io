@@ -72,6 +72,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/logo.png" alt="" class="navbar-logo">
+    <img src="../images/logo.png" alt="Purple hexagon with stat viz" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Statistical Visualisations</span>
@@ -109,6 +110,10 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -176,6 +181,9 @@ ul.task-list li input[type="checkbox"] {
     }
     </style>
 
+--&gt; to listing template
+--&gt; needs ID (resource-ID)
+--&gt; item.path
        <div class="rating-widget">
         <span class="star" data-value="1">★</span>
         <span class="star" data-value="2">★</span>
@@ -183,7 +191,10 @@ ul.task-list li input[type="checkbox"] {
         <span class="star" data-value="4">★</span>
         <span class="star" data-value="5">★</span>
     </div>
+    <div class="thank-you-message" style="display: none;">Thank you for your rating!</div>
 
+--&gt; Highlighting logic based on ID
+--&gt; calls a function 
   <script>
         document.addEventListener('DOMContentLoaded', () => {
             const stars = document.querySelectorAll('.star');
@@ -199,8 +210,9 @@ ul.task-list li input[type="checkbox"] {
                     
                     fetch(url, {mode: 'no-cors'})
                         .then(function(response) {
-                            // Since the response is opaque, you can't read its content.
                             console.log('Request was sent successfully.');
+                                                        ratingWidget.style.display = 'none';
+                            thankYouMessage.style.display = 'block';
                         }).catch(function(error) {  
                             console.log('Request failed', error);  
                         });

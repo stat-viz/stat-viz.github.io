@@ -26,5 +26,12 @@
     "title": "About",
     "section": "",
     "text": "About\nThis website was created during the following SIPS2024 Hackathon:\nInteractive Resources for All: A Hackathon to Enhance Statistics Literacy by Yu Yang Chou\nUnderstanding statistics is essential to researchers at all levels to interpret and apply findings, but also for the general population to critically evaluate information. While learning statistics can be challenging for those new to it, it has been shown that such experience can be improved through animation interactivity at least for basic concepts (Wang et al., 2011) and Bayesian reasoning (Mosca et al., 2021). However, creating such interactive resources is time-consuming and requires specific skill sets. Therefore, this hackathon aims to: collate interactive resources to help beginners to understand statistics (e.g., https://rpsychologist.com/; Magnusson, 2024); start creating an open-source textbook (e.g., a bookdown) to make these resources more accessible to instructors. To achieve these two aims, we will organize the hackathon in two parts: first, we will collaboratively decide what to include, and second, we will discuss the output format that will benefit students the most, and start creating this output."
+  },
+  {
+    "objectID": "external/rating_demo.html",
+    "href": "external/rating_demo.html",
+    "title": "R Psychologist",
+    "section": "",
+    "text": "Visualsations of statistical concepts by Kristoffer Magnusson, a clinical psychologist.\nDo you like this?\n     \n\n--&gt; to listing template\n--&gt; needs ID (resource-ID)\n--&gt; item.path\n       \n        ★\n        ★\n        ★\n        ★\n        ★\n    \n    Thank you for your rating!\n\n--&gt; Highlighting logic based on ID\n--&gt; calls a function"
   }
 ]
