@@ -23,6 +23,7 @@ website:
 format:
   html:
     theme: 
-      light: [flatly, light.scss]
-      dark: [darkly, dark.scss]
-    css: styles.css
+      light: [flatly, includes/light.scss]
+      dark: [darkly, includes/dark.scss]
+    css: includes/styles.css
+    include-after-body: includes/scripts.js
