@@ -5,7 +5,9 @@ console.log("sessionID: " + sessionID);
 
 var dataURL =  "https://docs.google.com/spreadsheets/d/e/2PACX-1vROebIG122A68wIC0kyMzhH7GNP3ye6Xhyl0CyV-7q8-N_B7hUMgkaADGjJy2Y3LD-lqXNJS0FVk8lm/pub?gid=2089079954&single=true&output=csv";
 
-fetch(dataURL, { mode: 'no-cors' })
+dataURL = 'https://corsproxy.io/?' + encodeURIComponent(dataURL);
+
+fetch(dataURL)
   .then(response => response.text())
   .then(csvText => {
     // Parse CSV text to array of objects
@@ -18,18 +20,21 @@ fetch(dataURL, { mode: 'no-cors' })
       });
       return obj;
     });
+    
+    console.log('data:', data); // Debugging log to check matching entry
+
 
     document.querySelectorAll('.star-rating').forEach(function(star) {
       var resourceID = star.getAttribute('data-id');
       var entry = data.find(row => row['Resource'] === resourceID);
 
       if (entry) {
-        console.log('Matching Entry for resourceID', resourceID, ':', entry); // Debugging log to check matching entry
+        console.log('Matching Entry for resourceID', resourceID, ':', entry); // Debugging log 
         var rating = parseFloat(entry['Rating']).toFixed(1);
         var count = entry['Count'];
         star.innerHTML = `${rating} (${count})`;
       } else {
-        star.innerHTML = "0.0 (0)";
+        star.innerHTML = "N/A";
       }
     });
   })
